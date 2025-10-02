@@ -66,8 +66,8 @@ all: main-build
 main-build: systick_gk.elf secondary-outputs
 
 # Tool invocations
-systick_gk.elf systick_gk.map: $(OBJS) $(USER_OBJS) C:\Users\ASUS\STM32CubeIDE\workspace_1.19.0\systick_gk\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "systick_gk.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\ASUS\STM32CubeIDE\workspace_1.19.0\systick_gk\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="systick_gk.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+systick_gk.elf systick_gk.map: $(OBJS) $(USER_OBJS) C:\Users\ASUS\Documents\GitHub\STM32\STM32_GK\systick_gk\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "systick_gk.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\GitHub\STM32\STM32_GK\systick_gk\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="systick_gk.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
